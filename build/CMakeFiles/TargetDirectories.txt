@@ -1,0 +1,7 @@
+/home/khan/projects/OOP/build/CMakeFiles/install/strip.dir
+/home/khan/projects/OOP/build/CMakeFiles/edit_cache.dir
+/home/khan/projects/OOP/build/CMakeFiles/oop.dir
+/home/khan/projects/OOP/build/CMakeFiles/rebuild_cache.dir
+/home/khan/projects/OOP/build/CMakeFiles/list_install_components.dir
+/home/khan/projects/OOP/build/CMakeFiles/install/local.dir
+/home/khan/projects/OOP/build/CMakeFiles/install.dir
