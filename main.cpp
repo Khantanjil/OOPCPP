@@ -2,110 +2,66 @@
 #include <string>
 #include <math.h>
 
+#include "BMI.h"
+
 using namespace std;
 
-class Animal{
-private:
-    std::string name;
+int main(){
+    string name;
     double height;
     double weight;
     
-    static int numOfAnimals;
+    cout << "Enter your name: ";
+    cin >> name;
+    cout << "Enter your height (in cms): ";
+    cin >> height;
+    cout << "Enter your weight (in kgs): ";
+    cin >> weight;
     
-public:
-    std::string GetName(){
-        return name;
-    }
-    void SetName(std::string name){
-        this->name = name;
-    }
-    double GetHeight(){
-        return height;
-    }
-    void SetHeight(double height){
-        this->height = height;
-    }
-    double GetWeight(){
-        return weight;
-    }
-    void SetWeight(double weight){
-        this->weight = weight;
-    }
+    BMI Student;
+    Student.setAll(name, height, weight);
+    Student.ToString();
     
-    void SetAll(std::string, double, double);
-    Animal(std::string, double, double);
-    Animal();
-    ~Animal(); // Deconstructor
-    static int GetNumOfAnimals(){
-        return numOfAnimals;
-    }
-    void ToString();
-};
-
-int Animal::numOfAnimals = 0; // Access variable
-
-
-void::Animal::SetAll(std::string name, double height, double weight){
-    this->name = name;
-    this->height = height;
-    this->weight = weight;
-    Animal::numOfAnimals++;
-}
-
-Animal::Animal(std::string name, double height, double weight){
-    this->name = name;
-    this->height = height;
-    this->weight = weight;
-    Animal::numOfAnimals++;
-}
-
-Animal::Animal(){
-    this->name = "";
-    this->weight = 0;
-    this->height = 0;
-    Animal::numOfAnimals++; 
-}
-
-Animal::~Animal(){
-    std::cout<<"Animal " << this->name << " destroyed\n";
-}
-
-void Animal::ToString(){
-    std::cout << this->name << " is " << this->height << " cms tall and " << this->weight << " kgs in weight\n";
-}
-
-class Dog: public Animal{
-private:
-    std::string sound = "Woof";
-public:
-    void MakeSound(){
-        std::cout << "The dog " << this->GetName() << " says " << this->sound << "\n";
-    }
-    Dog(std::string, double, double, std::string); // Constructor
-    Dog(): Animal(){}; // Default Constructor
-    void ToString();
-};
-
-Dog::Dog(std::string name, double height, double weight, std::string sound) : Animal(name, height, weight){
-    this->sound = sound;
-}
-
-void Dog::ToString(){
-    std::cout << this->GetName() << " is " << this->GetHeight() << " cms tall and " << this->GetWeight() << " kgs in weight and says " << this->sound << "\n.";
-}
-
-int main(){
-    Animal fred;
-    fred.ToString();
-    fred.SetHeight(33);
-    fred.SetWeight(10);
-    fred.SetName("Fred");
-//     fred.ToString();
-    Animal tom("Tom", 36, 15);
-    tom.ToString();
-    Dog spot("Spot", 38, 16, "Wooooof");
-    spot.ToString();
-    std::cout << "Number of animals: " << Animal::GetNumOfAnimals() << "\n"; 
+    
+    
+//     BMI Student_1(name, height, weight);
+//     
+//     cout << endl << "Object name: " << Student_1.getName() << endl << 
+//     "Height: " << Student_1.getHeight() << endl <<
+//     "Weight: " << Student_1.getWeight() << endl << "BMI: " << Student_1.calculatorBMI() << endl;
+//     
+//     cout << endl;
+//     
+//     cout << "Enter your name: ";
+//     cin >> name;
+//     cout << "Enter your height (in cms): ";
+//     cin >> height;
+//     cout << "Enter your weight (in kgs): ";
+//     cin >> weight;
+//     
+//     
+//     BMI Student_2;
+//     Student_2.setName(name);
+//     Student_2.setHeight(height);
+//     Student_2.setWeight(weight);
+//     cout << endl << "Object name: " << Student_2.getName() << endl << 
+//     "Height: " << Student_2.getHeight() << endl <<
+//     "Weight: " << Student_2.getWeight() << endl <<
+//     "BMI: " << Student_2.calculatorBMI() << endl;
+//     
+//     cout << endl;
+//     
+//     cout << "Enter your name: ";
+//     cin >> name;
+//     cout << "Enter your height (in m): ";
+//     cin >> height;
+//     cout << "Enter your weight (in kgs): ";
+//     cin >> weight;
+//     
+//     BMI Student_3(name, height, weight);
+//     Student_3.ToString();
+    
+    
     return 0;
     
 }
